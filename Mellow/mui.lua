@@ -72,7 +72,7 @@
 
       -- OR --
 
-    local bet = api.loadBet('/home/big.bet')
+    local bet = api.loadBet('/home/big.bet', 4, 4, '0123456789abcdefghijklmnopqrstuvwxyz')
     mui.addImage(4, 4, bet:from('hi'))
 
 
@@ -230,8 +230,8 @@ function api.addBtn(x, y, w, h, defaultColor, pressColor, callback)
     w = w,
     h = h,
     color = {
-        default = defaultColor,
-        pressed = pressColor,
+      default = defaultColor,
+      pressed = pressColor,
     },
     state = false,
     callback = callback,
