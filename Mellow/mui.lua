@@ -362,6 +362,10 @@ end
 
 -- LOOP
 function api.runLoop(events)
+  running = true
+  pending = false
+  elements = {}
+
   local inInterrupt = events.interrupted
   local inTouch = events.touch
   local inDraw = events.draw
